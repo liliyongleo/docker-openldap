@@ -5,6 +5,8 @@ VERSION = 1.2.4
 
 build:
 	docker build -t $(NAME):$(VERSION) --rm image
+build2:
+	docker build --network=host -t $(NAME):$(VERSION) --rm image
 
 build-nocache:
 	docker build -t $(NAME):$(VERSION) --no-cache --rm image
